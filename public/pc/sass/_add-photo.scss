@@ -1,0 +1,6 @@
+@import "compass/utilities/sprites";
+@import "photo/*.png";
+
+$photo-sprite-dimensions: true;
+
+@include all-photo-sprites();

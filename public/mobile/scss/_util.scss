@@ -1,0 +1,31 @@
+@mixin display-flex($flex: flex) {
+	display: -webkit-box;
+	display: box;
+	display: -webkit- + $flex + box;
+	display: $flex + box;
+	display: -webkit- + $flex;
+	display: $flex;
+}
+
+@mixin justify-content($justify) {
+	@if $justify == start or $justify == end {
+		-webkit-box-pack: $justify;
+		box-pack: $justify;
+		-webkit-flex-pack: $justify;
+		flex-pack: $justify;
+		-webkit-justify-content: justify + $justify;
+		justify-content: justify + $justify;
+	} @else if $justify == center {
+		-webkit-box-pack: center; 
+		-moz-box-pack: center; 
+		-ms-flex-pack: center; 
+		-webkit-justify-content: center;
+		justify-content: center;
+	} @else if $justify == space-between {
+		-webkit-box-pack: justify;
+		-moz-box-pack: justify; 
+		-ms-flex-pack: justify; 
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+}

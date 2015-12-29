@@ -1,0 +1,42 @@
+.select{
+    position: relative;
+    background: #eee;
+    width: 7em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+//  overflow: hidden;
+    .textWrapper{
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+    } 
+    .options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        border:1px solid #dedede;
+        padding: 0 1px 1px;
+        width: 100%;
+        z-index: 9999;
+        background: #fff;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .options.active {
+        display: block;
+    }
+    .option {
+        text-align: center;
+        padding:5px;
+        background: #fff;
+        color: #333;
+        cursor: pointer;
+    }
+    .option.active,
+    .option:hover{
+        background: #428bca;
+        color: #fff;
+    }
+}

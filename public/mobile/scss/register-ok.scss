@@ -1,0 +1,27 @@
+@import 'login-register-panel';
+
+main {
+	display: block;
+}
+
+.panel {
+	top: 40%;
+}
+
+.panel-logo {
+	& > a {
+		& > img {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.login-register-panel {
+	p {
+		width: 90%;
+		margin: 0 auto;
+		color: $fontColor;
+		font-size: 15px;
+		line-height: 1.3;
+	}
+}

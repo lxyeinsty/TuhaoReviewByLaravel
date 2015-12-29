@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.logo-sprite, .logo-close-btn, .logo-down-arrow, .logo-large-down-arrow, .logo-large-up-arrow, .logo-left-arrow, .logo-pre-login, .logo-right-arrow, .logo-search, .logo-self-info, .logo-toggle {
+  background-image: url('../images/logo-se690a4decc.png');
+  background-repeat: no-repeat;
+}
+
+.logo-close-btn {
+  background-position: 0 0;
+  height: 57px;
+  width: 57px;
+}
+
+.logo-down-arrow {
+  background-position: 0 -65px;
+  height: 9px;
+  width: 14px;
+}
+
+.logo-large-down-arrow {
+  background-position: 0 -82px;
+  height: 14px;
+  width: 22px;
+}
+
+.logo-large-up-arrow {
+  background-position: 0 -104px;
+  height: 14px;
+  width: 22px;
+}
+
+.logo-left-arrow {
+  background-position: 0 -126px;
+  height: 12px;
+  width: 8px;
+}
+
+.logo-pre-login {
+  background-position: 0 -146px;
+  height: 26px;
+  width: 26px;
+}
+
+.logo-right-arrow {
+  background-position: 0 -180px;
+  height: 12px;
+  width: 8px;
+}
+
+.logo-search {
+  background-position: 0 -200px;
+  height: 22px;
+  width: 19px;
+}
+
+.logo-self-info {
+  background-position: 0 -230px;
+  height: 15px;
+  width: 16px;
+}
+
+.logo-toggle {
+  background-position: 0 -253px;
+  height: 16px;
+  width: 16px;
+}
+
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*
+*/
+/*
+* Clearfix
+*
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+* bypass text
+*/
+/*
+* Animation
+*
+*/
+/*
+* Alerted
+*
+*/
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+* 
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+.item1,
+.item2,
+.item3 {
+  max-width: 940px;
+  margin: auto;
+}
+
+.item1 {
+  min-width: 400px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+  height: 100%;
+}
+
+* {
+  font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+}
+
+/* set the min-width*/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header {
+  background-color: #f1f1f1;
+  height: 49px;
+  border-bottom: 1px solid #cacaca;
+}
+
+.item1 {
+  position: relative;
+}
+.item1 .logo {
+  position: absolute;
+  background-color: #ffd200;
+  width: 159px;
+  height: 96px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px;
+  cursor: pointer;
+}
+.item1 h1 {
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item1 span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  line-height: 2em;
+}
+.item1 .forget-password {
+  color: #7f7f7f;
+  font-size: 16px;
+  line-height: 49px;
+  margin-left: 180px;
+}
+.item1 .search {
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  height: 49px;
+  line-height: 49px;
+  margin: 0 15px;
+  cursor: pointer;
+  right: 0px;
+  top: 0px;
+}
+.item1 .search .logo-self-info {
+  padding: 5px;
+  background-color: #a0a0a0;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: content-box;
+  border-radius: 3px;
+  cursor: pointer;
+  /* 提示符 */
+  /*@include hui_tooltip(attr(data-tooltip),bottom);*/
+}
+
+.item2 {
+  margin-top: 100px;
+}
+.item2 header {
+  font-size: 16px;
+  color: #6a6a6a;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+.item2 header::before {
+  content: "";
+  margin: 0 8px;
+  line-height: 20px;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+  background-color: #ffd200;
+}
+.item2 .confirmation {
+  margin-top: 40px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  border-spacing: 5px 27px;
+  border-collapse: separate;
+}
+.item2 .confirmation .feedback {
+  width: 640px;
+  height: 134px;
+  resize: none;
+  border: 1px solid #e4e4e4;
+  background-color: #f6f6f6;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.item2 .confirmation .email-td {
+  position: relative;
+}
+.item2 .confirmation .email-td .prompt {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  color: #5F5F5F;
+  margin-top: -5px;
+}
+.item2 .confirmation .email-td .prompt::before {
+  content: '';
+  display: inline-block;
+  background-color: #ffd200;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  top: 46px;
+}
+.item2 .confirmation td {
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  color: #717171;
+}
+.item2 .confirmation td:first-child {
+  text-align: right;
+  padding-right: 8px;
+  vertical-align: top;
+}
+.item2 .confirmation td input {
+  border: 1px solid #e4e4e4;
+  background-color: #f6f6f6;
+  outline: none;
+  padding-left: 8px;
+  box-sizing: border-box;
+  height: 35px;
+  font-size: 18px;
+}
+.item2 .confirmation td input[role="email"] {
+  width: 291px;
+}
+.item2 .confirmation td input[role="verification"] {
+  width: 133px;
+}
+@media (max-width: 430px) {
+  .item2 .confirmation td:first-child {
+    display: none;
+  }
+  .item2 .confirmation td input[role="email"],
+  .item2 .confirmation td input[role="verification"] {
+    width: 291px;
+  }
+  .item2 .confirmation td:last-child {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+.item2 .confirmation td button[role="submit"] {
+  width: 135px;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #ffd200;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+body > footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=footer.css.map */

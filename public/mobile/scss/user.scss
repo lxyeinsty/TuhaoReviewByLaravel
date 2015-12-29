@@ -1,0 +1,53 @@
+@import 'header';
+@import 'goods-card';
+@import 'user-panel';
+@import 'mes';
+body {
+    position: relative;
+    background-color: $backgroundColor;
+}
+
+main {
+    display: block;
+}
+
+.goods-sending-list {
+    position: relative;
+    padding: 10px 2.5%;
+}
+
+.mes-hint {
+    position: fixed;
+}
+
+.user-panel-tab {
+    li {
+        width: 100px;
+        margin-right: 10px;
+        text-align: center;
+    }
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 15;
+    text-align: center;
+    img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        width: 50px;
+        height: auto;
+    }
+}
+
+.show-loading {
+    display: block;
+}

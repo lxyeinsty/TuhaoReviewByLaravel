@@ -1,0 +1,56 @@
+@import 'login-register-panel';
+
+main {
+	display: block;
+}
+
+.panel {
+	top: 40%;
+}
+
+.panel-logo {
+	& > a {
+		& > img {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.ok-icon {
+	float: left;
+	margin-left: -35px;
+	&::before {
+		content: '\e90a';
+		font-family: 'icomoon';
+		font-size: 30px;
+		color: $tuhaoColor;
+	}
+}
+
+.fail-icon {
+	float: left;
+	margin-left: -35px;
+	margin-top: 3px;
+	&::before {
+		content: '\e90b';
+		font-family: 'icomoon';
+		font-size: 30px;
+		color: $tuhaoColor;
+	}
+}
+
+.login-register-panel {
+	padding-left: 50px;
+	p {
+		margin-left: 5px;
+		color: $fontColor;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+}
+
+#time {
+	font-size: 20px;
+	color: $tuhaoColor;
+	font-weight: bold;
+}

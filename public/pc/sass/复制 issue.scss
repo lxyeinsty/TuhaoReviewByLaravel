@@ -1,0 +1,566 @@
+$fontSize: 20px;
+$inputHeight: 38px;
+$buttonHeight: 40px;
+$fontInner: 18px;
+$fontError: 12px;
+@import "compass/css3";
+@import "add-photo";
+.doodle {
+    height: 46px; 
+    background-color: transparent;
+}
+
+.doodle nav {
+    background-color: #4d4d4d;
+}
+
+.doodle nav a {
+    color: #fff;
+}
+
+.issue-spirites-sprite,
+.issue-add-photo,
+.issue-add-photo:hover,
+.issue-weave {
+    background-image: url('../images/issue-spirites-s9da9aa3735.png');
+    background-repeat: no-repeat;
+}
+
+.issue-close-sprite,
+.delete-photo,
+.delete-photo:hover {
+    background-image: url('../images/issue-close-s0f04aef4ab.png');
+    background-repeat: no-repeat;
+}
+
+.upload-photo-sprite,
+.init-photo,
+.init-photo:hover,
+.init-photo-hover {
+    background-image: url('../images/upload-photo-s9c0d0eb0a3.png');
+    background-repeat: no-repeat;
+}
+
+.issue-add-photo {
+    background-position: 0 -153px;
+    height: 141px;
+    width: 181px;
+}
+
+.issue-add-photo:hover {
+    background-position: 0 -12px;
+    height: 141px;
+    width: 181px;
+}
+
+.issue-weave {
+    background-position: 0 -294px;
+    height: 7px;
+    width: 290px;
+}
+
+// .form-down-arrow {
+//   background-position: 0 0;
+//   height: 12px;
+//   width: 22px;
+// }
+.delete-photo {
+    background-position: 0 -20px;
+    height: 20px;
+    width: 20px;
+}
+
+.delete-photo:hover {
+    background-position: 0 0;
+    height: 20px;
+    width: 20px;
+}
+
+.init-photo {
+    background-position: 0 -139px;
+    height: 139px;
+    width: 140px;
+}
+
+.init-photo:hover,
+.init-photo-hover {
+    background-position: 0 0;
+    height: 139px;
+    width: 140px;
+}
+
+.issue-main-frame {
+    position: relative;
+}
+
+.issue-nav {
+    position: absolute;
+    width: 100%;
+    height: 267px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d8d8d8;
+    z-index: -1;
+}
+
+.issue-main {
+    position: relative;
+    width: 928px;
+    margin: 0 auto;
+}
+
+.issue-title {
+    text-align: center;
+    font-size: 28px;
+    padding: 30px 0;
+}
+
+.add-photo-area {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.add-photo-area p {
+    margin-bottom: 8px;
+    color: #212121;
+    font-size: 25px;
+}
+
+.add-photo-area .pic-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e7e7e7;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #bfbfbf;
+    font-size: $fontSize - 2px;
+    color: #333;
+    margin-bottom: 0;
+    @include box-sizing(border-box);
+}
+
+.add-photo-area .photo-add-photo {
+    position: relative;
+    display: inline-block;
+}
+
+.add-photo-area .photo-add-photo #first-upload-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.add-photo-area .issue-weave {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.photo-preview-area {
+    display: none;
+    padding: 12px 0 10px;
+    position: relative;
+    margin-bottom: -20px;
+}
+
+.upload-photo-area {
+    padding-left: 115px;
+    text-align: left;
+    font-size: 0;
+}
+
+.upload-photo-area .upload-ph {
+    display: inline-block;
+    position: relative;
+    width: 139px;
+    height: 140px;
+    padding: 10px;
+    background-color: #fff;
+    -moz-box-shadow: 0 0 2px #d8d8d8;
+    -webkit-box-shadow: 0 0 2px #d8d8d8;
+    box-shadow: 0 0 2px #d8d8d8;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.upload-photo-area .upload-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-preview {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.delete-photo {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+}
+
+.upload-info {
+    margin-top: 20px;
+    color: #777;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.issue-form-area {
+    padding-top: 25px;
+    padding-bottom: 80px;
+    border: 1px solid #d8d8d8;
+    border-top: 2px solid #ffd200;
+    background-color: #fff;
+    position: relative;
+}
+
+.boxshadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 140px;
+    @include box-shadow(0 0 15px #afafaf);
+    z-index: -1;
+}
+
+.issue-form-item {
+    width: 100%;
+    padding-bottom: 30px;
+    font-size: 0;
+}
+
+.form-key {
+    display: inline-block;
+    width: 24.35345%;
+    height: $inputHeight;
+    margin-right: 10px;
+    color: #434343;
+    text-align: right;
+    font-size: $fontSize;
+    line-height: $inputHeight;
+    vertical-align: top;
+}
+
+.form-value {
+    display: inline-block;
+    width: 58.94397%;
+    vertical-align: top;
+}
+
+.form-input-wr {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    height: $inputHeight;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 7px;
+    border: 1px solid #d8d8d8;
+    background-color: #f6f6f6;
+    font-size: 0;
+    span{
+        font-size: 18px;
+        vertical-align: middle;
+    }
+}
+.check-activity {
+    .form-input-wr {
+        display: inline-block;
+        width: 19.50431%;
+        margin-right: 20px;
+        position: relative;
+        vertical-align: top;
+        cursor: pointer;
+    }
+    input{
+        display: none;
+    }
+    input:checked + label .form-input-wr{
+        border: 1px solid #eb5053;
+    }
+}
+.delete-goods {
+    position: relative;
+    & > a {
+        position: absolute;
+        top: -55px;
+        right: 0;
+        display: block;
+        padding: 5px;
+        border: 1px solid #d8d8d8;
+        font-size: 14px;
+        color: #5f5f5f;
+        text-indent: 16px;
+        background-color: #f6f6f6;
+        background-image: image-url("tick.png");
+        background-repeat: no-repeat;
+        background-position: 5px center;
+        @include transition(background-color .2s);
+        &:hover {
+            background-color: #b5b5b5;
+        }
+    }
+}
+
+.form-input-wr::before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.form-input-wr input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-family: "Microsoft YaHei", "Arial", sans-serif;
+    font-size: $fontInner;
+    color: #5f5f5f;
+    outline: 0;
+    vertical-align: middle;
+}
+
+.form-input-wr textarea {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-top: 1px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-family: "Microsoft YaHei", "Arial", sans-serif;
+    font-size: $fontInner;
+    color: #5f5f5f;
+    outline: 0;
+    resize: none;
+}
+
+.form-input-error {
+    border: 1px solid rgb(235, 80, 83);
+    background-color: rgb(255, 233, 236);
+}
+
+.error-info {
+    font-size: 0;
+    padding-top: 8px;
+    padding-left: 8px;
+    margin-bottom: -15px;
+    display: none;
+}
+
+.error-circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background-color: #ffd200;
+    border: 1px solid #ffd200;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.error-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $fontError;
+    color: #212121;
+}
+
+.goods-detailed .form-input-wr {
+    height: 193px;
+}
+
+.master-desire .form-input-wr {
+    height: 88px;
+}
+
+.check-issue {
+    font-size: 0;
+    .form-issue-wr {
+        padding: 5px 0;
+    }
+    input[type='checkbox'] {
+        display: inline-block;
+        margin: 0;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+    }
+    i {
+        font-size: 15px;
+        margin-right: 2px;
+        color: #333;
+        vertical-align: middle;
+    }
+    a {
+        font-size: 15px;
+        text-decoration: none;
+        color: #F1C707;
+        vertical-align: middle;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.issue-button {
+    display: block;
+    width: 100%;
+    height: $buttonHeight;
+    text-align: center;
+    background-color: #282828;
+    font-size: $fontSize;
+    line-height: $buttonHeight;
+    color: #f6f6f6;
+}
+
+.issue-button:hover {
+    opacity: 0.9;
+}
+
+.goods-cat {
+    font-size: 0;
+}
+
+.goods-cat .form-value {
+    display: inline-block;
+    width: 19.50431%;
+    margin-right: 20px;
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.goods-cat .form-value-l {
+    display: inline-block;
+    width: 19.50431%;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    cursor: pointer;
+    display: none;
+}
+
+.goods-cat .form-input-wr {
+    text-align: center;
+}
+
+.goods-cat .form-input-wr span {
+    font-size: $fontInner;
+    color: #5f5f5f;
+    vertical-align: middle;
+}
+
+.form-down-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 15px;
+    height: 38px;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    line-height: $inputHeight;
+    pointer-events: none;
+    @include box-sizing(border-box);
+    span {
+        background-image: url(../images/down-arrow.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 6px;
+        height: 5px;
+    }
+}
+
+.form-input-error .form-down-arrow {
+    border: 1px solid #eb5053;
+}
+
+.issue-category,
+.issue-category-next {
+    display: none;
+    position: absolute;
+    top: $inputHeight;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    border-top: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.issue-category li,
+.issue-category-next li {
+    font-size: $fontInner;
+    padding: 8px 0;
+    color: #5f5f5f;
+}
+
+.issue-category li:hover,
+.issue-category-next li:hover {
+    background-color: #e2e2e2;
+}
+
+.item-hide {
+    display: none;
+}
+
+.item-show {
+    display: block;
+}
+
+.ajax-send {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+// #mes {
+//   visibility: hidden;
+//   z-index: -100;
+//   transform: translateY(100%);
+//           transition: all linear 200ms;
+//       -ms-transition: all linear 200ms;
+//      -moz-transition: all linear 200ms;
+//   -webkit-transition: all linear 200ms;
+// }
+// #mes.active {
+//   visibility: visible;
+//   z-index: 9999;
+//   transform: translateY(0);
+//           transition: all linear 200ms;
+//       -ms-transition: all linear 200ms;
+//      -moz-transition: all linear 200ms;
+//   -webkit-transition: all linear 200ms;
+// }

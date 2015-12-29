@@ -1,0 +1,53 @@
+@import 'header';
+@import 'user-panel';
+@import './mes';
+
+body {
+	position: relative;
+	background-color: $backgroundColor;
+}
+
+main {
+	display: block;
+}
+
+.user-specific-info {
+	width: 95%;
+	margin: 10px auto;
+
+	& > a {
+		margin-top: 15px;
+		display: block;
+		background-color: $tuhaoColor;
+		color: $fontColor;
+		font-size: $middleSize;
+		padding: 10px 0;
+		text-align: center;
+	}
+}
+
+.user-info-item {
+	// @include box-sizing(border-box);
+	border: 1px solid $borderColor;
+	background-color: #fff;
+	font-size: 0;
+	color: $fontColor;
+	padding: 10px;
+
+	span {
+		display: inline-block;
+		font-size: $middleSize;
+		line-height: 30px;
+	}
+
+	input {
+		@include box-sizing(border-box);
+		font-size: $middleSize;
+		border: 0;
+		display: inline-block;
+		width: 85%;
+		margin-left: 2%;
+		height: 30px;
+		color: #333;
+	}
+}

@@ -1,0 +1,104 @@
+@import 'reset';
+@import 'compass/css3';
+.user-panel {
+    background-color: #fff;
+    border-bottom: 1px solid $borderColor;
+    p {
+        font-size: $middleSize;
+        color: rgb(97, 97, 97);
+    }
+}
+
+.user-intro {
+    @include box-sizing(border-box);
+    position: relative;
+    border-bottom: 1px solid $borderColor;
+    padding: 10px;
+    & > a {
+        position: relative;
+        display: inline-block;
+        width: 110px;
+        height: 110px;
+        vertical-align: top;
+        border: 1px solid $borderColor;
+        background-color: $backgroundColor;
+        overflow: hidden;
+        img {
+            position: absolute;
+            max-height: 100%;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+        }
+    }
+}
+
+.user-info {
+    position: absolute;
+    left: 130px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    & > h2 {
+        width: 55%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: $bigSize;
+        color: rgb(67, 67, 67);
+        margin-bottom: 10px;
+    }
+}
+
+.user-rank {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+}
+
+.user-grades {
+    margin-left: 10px;
+}
+
+.edit-info {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid $borderColor;
+    color: rgb(97, 97, 97);
+    font-size: $smallSize;
+    padding: 2px;
+    span {
+        &::before {
+            content: '\e905';
+            font-family: 'icomoon';
+            margin-right: 5px;
+        }
+    }
+}
+
+.user-panel-tab {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0;
+    li {
+        height: 36px;
+        width: 25%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include box-sizing(border-box);
+        line-height: 36px;
+        display: inline-block;
+        font-size: $middleSize;
+        color: $fontColor;
+        text-align: center;
+        // border-bottom: 2px solid rgba(0, 0, 0, 0);
+        @include transition(border 0.2s linear);
+        &.current-choose {
+            border-bottom: 2px solid $tuhaoColor;
+            color: $tuhaoColor;
+        }
+    }
+}

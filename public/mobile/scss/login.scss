@@ -1,0 +1,45 @@
+@import 'login-register-panel';
+@import 'util';
+
+main {
+	display: block;
+}
+
+.panel-item {
+	margin-top: 25px;
+	font-size: 0;
+	color: #a5a5a5;
+	& > input {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0;
+		vertical-align: middle;
+		margin-right: 5px;
+		background-color: #fff;
+	}
+
+	& > span {
+		font-size: 15px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+.login-extra-info {
+	// @include display-flex;
+	// @include justify-content(space-between);
+	display: table;
+	width: 100%;
+	margin-top: 25px;
+	color: #3797ed;
+	font-size: 15px;
+
+	a {
+		display: table-cell;
+		width: 50%;
+		&:nth-of-type(2) {
+			text-align: right;
+		}
+	}
+}

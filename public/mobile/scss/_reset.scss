@@ -1,0 +1,54 @@
+@import 'compass/reset';
+$bigSize: 16px;
+$middleSize: 14px;
+$smallSize: 12px;
+$miniSize: 10px;
+$tuhaoColor: #f5ca49;
+$borderColor: #efefef;
+$backgroundColor: #f5f5f5;
+$grey: rgb(135, 135, 135);
+$fontColor: rgb(97, 97, 97);
+$darkGrey: rgb(35, 33, 33);
+$fontFamily: "tuhao",
+Arial;
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot') format('embedded-opentype'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tuhao';
+    src: url('../fonts/tuhao.eot');
+    src: url('../fonts/tuhao.eot?#font-spider') format('embedded-opentype'), url('../fonts/tuhao.ttf') format('truetype'), url('../fonts/tuhao.woff') format('woff'), url('../fonts/tuhao.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: "tuhao", Arial;
+    // font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    outline: 0;
+    color: inherit;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
+}

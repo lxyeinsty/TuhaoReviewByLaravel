@@ -1,0 +1,6 @@
+@import 'compass/utilities/sprites';
+@import 'arrow/*.png';
+
+$arrow-sprite-dimensions: true;
+
+@include all-arrow-sprites();

@@ -1,0 +1,27 @@
+@import '_rules';
+#main {
+    .content{
+        header{
+            padding: 10px 24px 10px 30px;
+        }
+    }
+}
+.self-info .item1>li>a{
+    color: #7f7f7f;
+}
+.self-info .item1 {
+    float: right;
+}
+ol {  
+    padding-bottom: 24px;
+    li {
+    margin-top: 17px;
+    padding: 10px 24px 10px 30px;
+    background: #f7f7f7;
+    text-indent: -1.125em;
+    font-size: 16px;
+    font-size: rem(16);
+    line-height: 1.7;
+    color:  #7f7f7f;
+    }
+}

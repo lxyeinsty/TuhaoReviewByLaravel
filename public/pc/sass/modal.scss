@@ -1,0 +1,358 @@
+@import '_flex'; 
+.modal-title {
+  position: absolute;
+  top: -20px;
+  @include display-flex();
+  width: 100%;
+} 
+ 
+.modal-title span {   
+  border-top: 1px solid #B6B2B2; 
+  @include flex(1);   
+  display: inline-block;
+  @include align-self(center);
+}
+
+.login-modal, 
+.signin-modal,  
+.info-modal {
+  width: 366px;
+  border: 1px solid #B6B2B2;
+  border-top: 0px;
+  position: relative;
+  display: none;
+}
+
+.signin-modal {
+  width: 379px;
+}
+
+.login-modal .login-btns {
+  cursor: no-drop;
+}
+
+.login-modal .simplemodal-close,
+.signin-modal .simplemodal-close,
+.info-modal .simplemodal-close {
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+  cursor: pointer;
+  right: -69px;
+  top: -66px;
+}
+
+.for-login,
+.for-signin {
+  height: 40px;
+  text-align: center;
+  border-top: 1px solid #B6B2B2;
+}
+
+.for-login a,
+.for-signin a {
+  line-height: 40px;
+  height: 40px;
+  color: #ffd200;
+  text-decoration: underline;
+}
+
+.login-modal h3,
+.signin-modal h3,
+.info-modal h3 {
+  font-size: 27px;
+  line-height: 1.5em;
+  color: #edebee;
+  width: 168px;
+  @include flex(1.5);
+  text-align: center;
+}
+
+.login-modal ul,
+.signin-modal ul {
+  padding: 32px 28px 20px;
+}
+
+.info-modal ul {
+  padding: 32px 21px 20px;
+}
+
+.login-modal ul p,
+.signin-modal ul p,
+.info-modal ul p {
+  line-height: 20px;
+  margin: 10px 0;
+  color: #edebee;
+}
+
+.login-modal ul p::after,
+.signin-modal ul p::after,
+.info-modal ul p::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.login-modal ul p label,
+.login-modal ul p input,
+.signin-modal ul p label,
+.signin-modal ul p input,
+.info-modal ul p label,
+.info-modal ul p input {
+  cursor: pointer;
+}
+
+.login-modal ul p .agreement,
+.signin-modal ul p .agreement,
+.info-modal ul p .agreement {
+  color: #3B55F7;
+  text-decoration: underline;
+}
+
+.login-modal ul p .forgetps-btn,
+.signin-modal ul p .forgetps-btn,
+.info-modal ul p .forgetps-btn {
+  float: right;
+  color: #edebee;
+  font-size: 14px;
+}
+
+.login-modal ul {
+  padding: 32px 20px 0;
+}
+
+.login-modal > ul li,
+.signin-modal > ul li,
+.info-modal > ul li {
+  width: 324px;
+  height: 52px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 52px;
+  position: relative;
+}
+
+.login-modal > ul li ~ li,
+.signin-modal > ul li ~ li {
+  margin-top: 20px;
+}
+
+.login-modal li input,
+.login-modal li button,
+.signin-modal li input,
+.signin-modal li button,
+.info-modal li input,
+.info-modal li select,
+.info-modal li button {
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #edebee;
+  border: 0px;
+  outline: none;
+  color: #212121;
+}
+
+.info-modal li select {
+  padding-left: 45%;
+  cursor: pointer;
+}
+
+.info-modal li select option {
+  background-color: #fff;
+}
+
+.info-modal li select option:hover {
+  background-color: #000;
+}
+// remove default stule
+/*.signin-modal > ul li[role="input"] + input,
+.login-modal > ul li[role="input"] + input,
+.info-modal > ul li[role="input"] {
+  margin-top: 5px;
+}*/
+.login-modal li button,
+.signin-modal li button,
+.info-modal li button {
+  background-color: #e4bc00;
+  font-size: 22px;
+  color: #070707;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.login-modal li button:hover,
+.signin-modal li button:hover,
+.info-modal li button:hover {
+  background-color: #ffd200;
+}
+.login-modal li button.disabled,
+.signin-modal li button.disabled,
+.info-modal li button.disabled {
+  background-color: #edebee;
+  cursor: not-allowed;
+}
+
+.login-modal li button.disabled:hover,
+.signin-modal li button.disabled:hover,
+.info-modal li button.disabled:hover {
+  background-color: #edebee;
+  cursor: not-allowed;
+}
+
+.login-modal .login-loading {
+  position: relative;
+  left: 50%;
+  margin-left: -47.5px;
+  display: none;
+}
+
+
+.login-modal > ul span,
+.signin-modal > ul span {
+  line-height: 23px;
+  height: 20px;
+  font-size: 14px;
+  color: #ffd200;
+  display: inline-block;
+  width: 89%;
+  text-align: center;
+  position: absolute;
+}
+
+.info-modal > ul span {
+  line-height: 23px;
+  height: 20px;
+  font-size: 14px;
+  color: #ffd200;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.login-modal > ul span:before,
+.signin-modal > ul span:before,
+.info-modal > ul span:before {
+  content: '';
+  display: inline;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ffd200;
+}
+
+.info-modal .select {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #edebee;
+  border: 0px;
+  cursor: pointer;
+  color: #212121;
+}
+
+.info-modal .select .select-value {
+  font-size: 25px;
+  color: #212121;
+  width: 100%;
+  text-align: center;
+  color: #A9A9A9;
+}
+
+.info-modal .select .after-select {
+  color: #212121;
+}
+
+.info-modal .select .down-arrow {
+  position: absolute;
+  width: 21px;
+  height: 100%;
+  border: 2px solid #bebdbf;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.info-modal .select .down-arrow::before {
+  top: 50%;
+  margin-top: -3px;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  color: #a0a0a0;
+  left: 50%;
+  margin-left: -6px;
+  background-color: transparent;
+  border-top: 6px solid #a0a0a0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.info-modal .select .down-arrow-after {
+  background-color: #b5b5b5;
+  border: 0px;
+}
+
+.info-modal .select .down-arrow-after::before {
+  color: #535353;
+}
+
+.info-modal #sex-content li {
+  width: 100%;
+}
+
+.info-modal #address_ul {
+  height: 84px;
+}
+
+.info-modal #address_ul li {
+  width: 100%;
+}
+
+.info-modal #colleges {
+  height: 150px;
+  overflow: auto;
+}
+
+.info-modal .select-content {
+  position: relative;
+  display: none;
+  z-index: 2;
+  padding: 0;
+  overflow: auto;
+  background-color: #d2d2d2;
+}
+
+.info-modal .select-content li {
+  width: 292px;
+  font-size: 20px; 
+  line-height: 52px;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+}
+ 
+.info-modal .select-content li:hover {
+  background-color: #b5b5b5;
+}
+
+.loading {
+  position: relative;
+  background-color: #ffd200;
+  top: -20px;
+  display: none;
+}
+
+.finish-btn {
+  cursor: no-drop !important;
+}

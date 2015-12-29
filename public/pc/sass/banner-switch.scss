@@ -1,0 +1,37 @@
+@import 'arrow';
+@import 'compass/css3';
+
+.carsouel:hover {
+	.switch-arrow {
+		@include opacity(1);
+		cursor:pointer;
+	}
+}
+
+.switch-arrow {
+	position: absolute;
+	top: 50%;
+	@include translateY(-50%);
+	@include transition(all 0.5s);
+	@include opacity(0);
+	background-color: rgba(0,0,0,0.2);
+	z-index: 9999;
+	padding: 10px;
+}
+
+.switch-arrow:hover {
+	background-color: rgba(0,0,0,0.4);
+}
+
+.arrow-left,
+.arrow-right {
+	display: block;
+}
+
+.left-arrow {
+	left: 0;
+}
+
+.right-arrow {
+	right: 0;
+}

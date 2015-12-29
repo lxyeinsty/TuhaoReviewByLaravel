@@ -1,0 +1,16 @@
+/.idea
+/vendor
+/public/uploads
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.project
+public/mobile/tpl/dist/.cache
+public/mobile/fonts/.font-spider
+public/mobile/*.html
+public/mobile/tuhao.ttf
+public/mobile/package.json
+public/mobile/webpack.config.js
+public/mobile/node_modules
+public/mobile/icomoon

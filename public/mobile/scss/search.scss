@@ -1,0 +1,73 @@
+@import 'header';
+@import 'goods-card';
+@import 'mes';
+body {
+    background-color: $backgroundColor;
+}
+
+main {
+    position: relative;
+    display: block;
+}
+
+.mes-hint {
+    position: fixed;
+}
+
+.search-tab {
+    background-color: #fff;
+    height: 36px;
+    & > ul {
+        // @include display-flex;
+        // @include justify-content(center);
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+        font-size: 0;
+    }
+}
+
+.search-choose {
+    display: inline-block;
+    @include box-sizing(border-box);
+    width: 25%;
+    height: 100%;
+    line-height: 36px;
+    color: $grey;
+    font-size: $middleSize;
+    text-align: center;
+    @include transition(border 0.2s linear);
+    &.current-choose {
+        border-bottom: 2px solid $tuhaoColor;
+        color: $tuhaoColor;
+    }
+}
+
+.search-result {
+    position: relative;
+    padding: 10px 2.5% 0;
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 15;
+    text-align: center;
+    img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        width: 50px;
+        height: auto;
+    }
+}
+
+.show-loading {
+    display: block;
+}
